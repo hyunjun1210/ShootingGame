@@ -8,6 +8,7 @@ public class StageSelect : MonoBehaviour
     [SerializeField] bool isStage1 = true;
     [SerializeField] GameObject left;
     [SerializeField] GameObject right;
+    [SerializeField] GameObject lockObject;
     [SerializeField] Animator animator;
 
     const string LEFT_ANIMA_NAME = "Stage2";
@@ -33,7 +34,8 @@ public class StageSelect : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Stage2");
+            if (GameManager.Instance.isStageLocked == false)
+                SceneManager.LoadScene("Stage2");
         }
     }
 
@@ -41,5 +43,6 @@ public class StageSelect : MonoBehaviour
     {
         left.SetActive(!isStage1);
         right.SetActive(isStage1);
+        lockObject.SetActive(GameManager.Instance.isStageLocked);
     }
 }

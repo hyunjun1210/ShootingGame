@@ -717,6 +717,7 @@ MonoBehaviour:
   heart: {fileID: 5370672799459696189, guid: 9a8e56d757feedc419c75c89f9b4a0ef, type: 3}
   hearts: {fileID: 824467316}
   gameOverUI: {fileID: 1524268553}
+  fuel: {fileID: 2060019268}
 --- !u!4 &286985329
 Transform:
   m_ObjectHideFlags: 0
@@ -2748,6 +2749,7 @@ MonoBehaviour:
   enemy:
   - {fileID: 2926427476762342599, guid: e22d3439ff83dc94186e74636c892e57, type: 3}
   - {fileID: 1751384565944670054, guid: 7e835ca3b1320254d97038eb9a16a970, type: 3}
+  - {fileID: 2926427476762342599, guid: 8220b476119c26645bff31bf24005fca, type: 3}
   pos: 
 --- !u!4 &1942467278
 Transform:

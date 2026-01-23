@@ -27,6 +27,8 @@ public class PlayerDataManager : MonoBehaviour
     public int maxHp;
     public int atkLevel;
     public int atkPower;
+    public float fuel;
+    public float maxFuel = 100;
 
     public List<GameObject> playerHeart = new List<GameObject>();
 
@@ -36,6 +38,7 @@ public class PlayerDataManager : MonoBehaviour
         hp = maxHp;
         atkPower = 1;
         atkLevel = 1;
+        fuel = maxFuel;
     }
 
     private void Update()

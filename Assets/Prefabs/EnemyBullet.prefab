@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7699287750291523805}
   - component: {fileID: 3525485475487992611}
   - component: {fileID: 5600058934746188823}
-  - component: {fileID: 8941990274461001347}
-  - component: {fileID: -7924078256004914569}
+  - component: {fileID: 5844398820066661005}
+  - component: {fileID: 2714566082455887009}
   m_Layer: 0
-  m_Name: PlayerBullet
-  m_TagString: PlayerBullet
+  m_Name: EnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e8cff005682f9d348996d7c3e9904ae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f216c3597a7799a4d8a6ad328ef9c503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8941990274461001347
+--- !u!114 &5844398820066661005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,12 +123,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6052277766478783305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8c7b6ea3fbb3a449dfd84737b981c7, type: 3}
+  m_Script: {fileID: 11500000, guid: ed1bd49455dce1940975d3033d05aa89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5600058934746188823}
-  speed: 9
---- !u!70 &-7924078256004914569
+  speed: 3
+--- !u!70 &2714566082455887009
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

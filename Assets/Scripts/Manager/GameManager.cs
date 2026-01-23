@@ -24,4 +24,6 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public bool isStageLocked = true;
+
+    public int enemyCount = 0;
 }

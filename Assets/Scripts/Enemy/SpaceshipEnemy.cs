@@ -39,12 +39,9 @@ public class SpaceshipEnemy : MonoBehaviour
 
     IEnumerator CoDamage()
     {
-        while (true)
-        {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            yield return new WaitForSeconds(.5f);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        }
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(.1f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     private void Update()

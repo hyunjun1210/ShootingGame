@@ -43,6 +43,10 @@ public class PlayerUI : MonoBehaviour
             Destroy(ins.playerHeart[0].gameObject);
             ins.playerHeart.RemoveAt(0);
         }
+        else if (ins.hp > ins.playerHeart.Count)
+        {
+            PlayerDataManager.Instance.playerHeart.Add(Instantiate(heart, hearts.transform));
+        }    
 
         if (ins.hp <= 0 || ins.fuel <= 0)
         {

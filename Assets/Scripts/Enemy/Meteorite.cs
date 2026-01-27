@@ -33,6 +33,7 @@ public class Meteorite : MonoBehaviour
         float maxY = Camera.main.orthographicSize;
         if (transform.position.y < -maxY || hp <= 0)
         {
+            ItemSpownManager.Instance.ItemInstaniate(transform.position);
             Destroy(gameObject);
         }
         rigidbody.velocity = Vector2.down * speed;

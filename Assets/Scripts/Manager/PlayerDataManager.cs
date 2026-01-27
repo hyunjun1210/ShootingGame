@@ -44,5 +44,6 @@ public class PlayerDataManager : MonoBehaviour
     private void Update()
     {
         hp = Mathf.Clamp(hp, 0, maxHp);
+        fuel = Mathf.Clamp(fuel, 0, maxFuel);
     }
 }

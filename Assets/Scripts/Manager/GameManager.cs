@@ -26,4 +26,18 @@ public class GameManager : MonoBehaviour
     public bool isStageLocked = true;
 
     public int enemyCount = 0;
+
+    public bool isInvincible = false;
+
+    public void Invisible()
+    {
+        StartCoroutine(CoInvincible());
+    }
+
+    IEnumerator CoInvincible()
+    {
+        isInvincible = true;
+        yield return new WaitForSecondsRealtime(1.5f);
+        isInvincible = false;
+    }
 }

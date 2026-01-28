@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddFuel : MonoBehaviour
+public class Invincible : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rigidbody = null;
     [SerializeField] private float speed = 6f;
@@ -12,7 +12,7 @@ public class AddFuel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerDataManager.Instance.fuel += 20;
+            GameManager.Instance.Invisible();
             Destroy(gameObject);
         }
     }

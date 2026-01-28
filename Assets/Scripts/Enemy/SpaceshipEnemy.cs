@@ -29,6 +29,11 @@ public class SpaceshipEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Shiled"))
+        {
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             hp -= PlayerDataManager.Instance.atkPower;

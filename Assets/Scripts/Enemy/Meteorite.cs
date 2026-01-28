@@ -12,7 +12,7 @@ public class Meteorite : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && GameManager.Instance.isInvincible == false)
         {
             PlayerDataManager.Instance.hp -= 1;
             Destroy(gameObject);
@@ -21,6 +21,12 @@ public class Meteorite : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Shiled"))
+        {
+            ItemSpownManager.Instance.ItemInstaniate(transform.position);
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             hp -= PlayerDataManager.Instance.atkPower;

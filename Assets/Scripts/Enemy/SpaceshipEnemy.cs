@@ -42,7 +42,7 @@ public class SpaceshipEnemy : MonoBehaviour
         }
     }
 
-    IEnumerator CoDamage()
+    public IEnumerator CoDamage()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(.1f);
@@ -59,6 +59,7 @@ public class SpaceshipEnemy : MonoBehaviour
 
     private void OnDestroy()
     {
+        GameManager.Instance.score += 5;
         GameManager.Instance.enemyCount--;
     }
 }

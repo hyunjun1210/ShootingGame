@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     public int enemyCount = 0;
 
     public bool isInvincible = false;
+    public int score = 0;
+    //스테이지별 점수
+    public Dictionary<int, List<int>> Score = new Dictionary<int, List<int>>();
 
     public void Invisible()
     {

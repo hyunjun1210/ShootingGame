@@ -12,6 +12,7 @@ public class AddHP : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.score++;
             PlayerDataManager.Instance.hp += 1;
             Destroy(gameObject);
         }

@@ -28,6 +28,7 @@ public class StageSelect : MonoBehaviour
 
     public void Select()
     {
+        GameManager.Instance.score = 0;
         if (isStage1)
         {
             SceneManager.LoadScene("Stage1");

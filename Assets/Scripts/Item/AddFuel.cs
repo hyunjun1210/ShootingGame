@@ -12,7 +12,8 @@ public class AddFuel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerDataManager.Instance.fuel += 20;
+            GameManager.Instance.score++;
+            PlayerDataManager.Instance.fuel += 40;
             Destroy(gameObject);
         }
     }

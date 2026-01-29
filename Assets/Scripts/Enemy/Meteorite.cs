@@ -7,7 +7,7 @@ public class Meteorite : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidbody = null;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float rotateSpeed = 6f;
-    [SerializeField] private float hp;
+    public float hp;
     [SerializeField] private float maxHp;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,6 +37,10 @@ public class Meteorite : MonoBehaviour
     private void Update()
     {
         float maxY = Camera.main.orthographicSize;
+        if (hp <= 0)
+        {
+            GameManager.Instance.score += 4;
+        }
         if (transform.position.y < -maxY || hp <= 0)
         {
             ItemSpownManager.Instance.ItemInstaniate(transform.position);

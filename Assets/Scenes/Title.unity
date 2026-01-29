@@ -426,8 +426,8 @@ MonoBehaviour:
   maxHp: 3
   atkLevel: 0
   atkPower: 1
-  fuel: 100
-  maxFuel: 100
+  fuel: 150
+  maxFuel: 150
   playerHeart: []
 --- !u!1 &526302456
 GameObject:
@@ -2620,6 +2620,7 @@ MonoBehaviour:
   - {fileID: 4440408581979009767, guid: 5fcd136dc3059ba4189d5b0ccaba040f, type: 3}
   - {fileID: 4440408581979009767, guid: d4eac991a080765429c38590e07ec857, type: 3}
   - {fileID: 4440408581979009767, guid: 805a4ec3e671d2647ad9f1406cd745e4, type: 3}
+  - {fileID: 4440408581979009767, guid: 254762d12fced1c49ba8aff9a669102f, type: 3}
 --- !u!1 &1821295165
 GameObject:
   m_ObjectHideFlags: 0

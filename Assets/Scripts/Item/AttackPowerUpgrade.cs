@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Invincible : MonoBehaviour
+public class AttackPowerUpgrade : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rigidbody = null;
     [SerializeField] private float speed = 6f;
@@ -13,7 +13,7 @@ public class Invincible : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.score++;
-            GameManager.Instance.Invisible();
+            PlayerDataManager.Instance.atkLevel++;
             Destroy(gameObject);
         }
     }

@@ -25,7 +25,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public int hp;
     public int maxHp;
-    public int atkLevel;
+    public int atkLevel = 1;
     public int atkPower;
     public float fuel;
     public float maxFuel = 100;
@@ -45,5 +45,7 @@ public class PlayerDataManager : MonoBehaviour
     {
         hp = Mathf.Clamp(hp, 0, maxHp);
         fuel = Mathf.Clamp(fuel, 0, maxFuel);
+        atkLevel = Mathf.Clamp(atkLevel, 1, 4);
+        atkPower = atkLevel;
     }
 }

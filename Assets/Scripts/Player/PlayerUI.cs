@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
@@ -10,6 +12,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] GameObject hearts = null;
     [SerializeField] GameObject gameOverUI = null;
     [SerializeField] Image fuel = null;
+    [SerializeField] TextMeshProUGUI attackPower = null;
+    [SerializeField] TextMeshProUGUI score = null;
 
     private void Start()
     {
@@ -55,6 +59,8 @@ public class PlayerUI : MonoBehaviour
             gameOverUI.SetActive(true);
         }
 
+        score.text = $"Score : {GameManager.Instance.score:000}";
         fuel.fillAmount = ins.fuel / ins.maxFuel;
+        attackPower.text = "00" + PlayerDataManager.Instance.atkLevel;
     }
 }
